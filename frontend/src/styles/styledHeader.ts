@@ -1,22 +1,20 @@
 import styled from "styled-components";
-
+import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
-import {AppBar, Toolbar, Typography} from "@mui/material";
+
+import {
+    AppBar
+} from "@mui/material";
 
 export const HeaderContainer = styled(Box)`
-    display: flex;
+  display: flex;
 `;
 export const StyledAppBar = styled(AppBar)`
-  height: 60px;
+  background-color: #f4f6f8;
 `;
 
-export const ProjectText = styled(Typography)`
-`;
-
-export const StyledToolbar = styled(Toolbar)`
-    display: flex;
-`
-
-export const ItemsContainer = styled.div`
-    display: flex;
+export const ConnectedButton = styled(Button)`
+  width: 120px;
+  height: 40px;
+  background-color: cornflowerblue;
 `
