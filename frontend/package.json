@@ -49,6 +49,7 @@
   },
   "devDependencies": {
     "@types/styled-components": "^5.1.26",
-    "@usedapp/core": "^1.2.1"
+    "@usedapp/core": "^1.2.1",
+    "react-router-dom": "^6.4.3"
   }
 }
