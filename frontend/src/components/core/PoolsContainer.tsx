@@ -18,13 +18,14 @@ export const PoolsContainer = () => {
     const contract = new ethers.Contract(address, object_abi, provider)
 
     const getPools = useCallback(async ()=>{
-        const activePools = await contract.getActivePools()
+        const activePools = await contract.methods.getActivePools();
         setPools(activePools)
     }, [pools])
 
     useEffect(()=>{
+        console.log(contract)
         console.log(pools)
-    }, [getPools]);
+    }, [pools, getPools]);
 
     return (
         <PoolsFlexContainer container>

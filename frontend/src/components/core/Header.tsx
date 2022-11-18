@@ -8,15 +8,13 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import {ConnectedButton, StyledAppBar} from "../../styles/styledHeader";
-import {useCallback, useEffect, useMemo, useState} from "react";
-import {ethers, Signer} from "ethers";
+import {useEffect, useMemo, useState} from "react";
 
 const pages = ['Offers', 'Create lot', 'MarketPlace'];
 
 export default function Header() {
     const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
     const [userAddress, setUserAddress] = useState("");
-    const [pools, setPools] = useState(null);
 
     const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorElNav(event.currentTarget);
