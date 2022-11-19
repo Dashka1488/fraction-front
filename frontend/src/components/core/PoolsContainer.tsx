@@ -18,7 +18,7 @@ export const PoolsContainer = () => {
     const contract = new ethers.Contract(address, object_abi, provider)
 
     const getPools = useCallback(async ()=>{
-        const activePools = await contract.methods.getActivePools();
+        const activePools = await contract.getActivePools()
         setPools(activePools)
     }, [pools])
 
