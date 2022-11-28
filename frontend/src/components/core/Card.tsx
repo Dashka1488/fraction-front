@@ -5,15 +5,15 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 
 type PoolCardDataProps = {
+    poolId: number,
     price: number,
     filledIn: number,
     nftName: string,
     nftDescription: string
-
 }
 
 export default function PoolCard(props: PoolCardDataProps) {
-    const {price, filledIn, nftName, nftDescription} = props;
+    const {poolId, price, filledIn, nftName, nftDescription} = props;
 
     return (
         <Card sx={{width: 330}}>

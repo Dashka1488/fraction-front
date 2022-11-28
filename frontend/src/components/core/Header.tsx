@@ -25,7 +25,7 @@ export default function Header() {
     };
 
     const shortAccount = useMemo(
-        () => `${userAddress.slice(0, 4)}...${userAddress.slice(-5)}`,
+        () => userAddress ? `${userAddress.slice(0, 4)}...${userAddress.slice(-5)}` : "Connect",
         [userAddress]
     );
 

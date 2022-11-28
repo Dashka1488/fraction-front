@@ -1,19 +1,42 @@
 import {Button, Grid} from "@mui/material";
 import * as React from "react";
 import {PoolContainer, PurchaseContainer} from "../../styles/styledActivePool";
-import PoolCard from "./Card";
+import CardMedia from "@mui/material/CardMedia";
+import CardContent from "@mui/material/CardContent";
+import Typography from "@mui/material/Typography";
+import Card from "@mui/material/Card";
 
-export const PoolPage = () => {
+type PoolPageProps = {
+    poolId: number,
+}
+
+export const PoolPage = (props: PoolPageProps) => {
+    const {poolId} = props;
+
     return (
         <PoolContainer container>
             <Grid container justifyContent="center" alignItems="center" sx={{padding: "30px"}}>
                 <Grid item>
-                    <PoolCard
-                        filledIn={32}
-                        nftDescription={'Описание нфт'}
-                        nftName={'Nft-1'}
-                        price={30}
-                    />
+                    <Card sx={{width: 330}}>
+                        <CardMedia
+                            component="img"
+                            height="330"
+                        />
+                        <CardContent>
+                            <Typography gutterBottom variant="h5" component="div">
+                                {poolId}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                {poolId}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                Price: {poolId} ETH
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                Filled in: {poolId}%
+                            </Typography>
+                        </CardContent>
+                    </Card>
                 </Grid>
             </Grid>
 

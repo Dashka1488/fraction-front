@@ -12,7 +12,7 @@ function App() {
             <Header/>
             <Routes>
                 <Route path="/" element={<PoolsContainer />} />
-                <Route path="/pool:id" element={<PoolPage />} />
+                <Route path="/pool:id" element={<PoolPage  poolId={1}/>} />
             </Routes>
         </div>
 
